@@ -5,6 +5,9 @@ const cors = require("cors");
 //const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
+
 app.post('/bfhl', (req, res) => {
     const { data } = req.body;
 
